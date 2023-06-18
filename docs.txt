@@ -1,0 +1,83 @@
+                                    1)Object data model for the nudge
+
+              -nudgeId     : To identify the id.
+              -eventId     : To identify for the event.
+              -title       : Title of the nudge.
+              -file [image]: URL of the image used for nudge cover.
+              -deliveryTime: Time for displaying the nudge.
+              -description : Detailed description or message within the nudge.
+              -icon        : Symbol with the nudge.
+              -invitation  : short invitation.
+
+
+
+                                   2)Api structure
+                         Base URL: https://api.example.com for all
+
+// Creating Nudge
+
+                         Request: POST /nudges
+                         
+                         Payload:
+                             eventId
+                             title 
+                             image 
+                             deliveryTime
+                             description
+                             icon
+                             invitation
+
+                         Description: creates an api using the given information
+//Get Nudge
+
+                         Request: GET /nudges/{nudgeId}
+                         Description: retrive information.
+
+
+//Update Nudge
+
+                         Request: PUT /nudges/{nudgeId}
+                         Payload: Same as the create.
+                         Description: Updates the attributes of a specific nudge.
+
+
+//Delete Nudge
+
+                         Request: DELETE /nudges/{nudgeId}
+                         Description: Deletes a specific nudge based on its nudgeId.
+
+
+//List Nudges
+
+                         Request: GET /nudges
+                         Description: Retrieves a list of all nudges available.
+
+
+
+                                3) CRUD functionalities
+
+Create: To create a nudge, send a POST request to the /nudges endpoint with the required payload attributes.
+
+Read: To retrieve details of a specific nudge, send a GET request to the /nudges/{nudgeId} endpoint.
+
+Update: To update a specific nudge, send a PUT request to the /nudges/{nudgeId} endpoint with the desired changes provided in the payload above.
+
+Delete: To delete a specific nudge, send a DELETE request to the /nudges/{nudgeId} endpoint.
+
+List: To retrieve a list of all nudges, send a GET request to the /nudges endpoint.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
